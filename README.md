@@ -22,5 +22,10 @@ This project aims to predict customer attrition (Churn) for a telecommunications
 
 > **Critical Analysis:** While the 80% accuracy looks strong, the **Recall** of 46% indicates the model is missing over half of the actual churners. This is a classic "Class Imbalance" problem where the model leans toward the majority class (Loyal Customers).
 
-## 🚀 Current Phase: Optimization
-I am currently implementing a **Random Forest Classifier** to improve the Recall score and reduce the number of missed churners (False Negatives).
+## Implemented Random Forest to fix the recall
+| Metric | Score |
+| :--- | :--- |
+| **Accuracy** | 79.91% |
+| **Recall (Churners)** | 47% |
+| **Precision (Churners)** | 67% |
+Insight: Despite moving from a Single Decision Tree to an Ensemble Random Forest, Churn Recall remained capped at ~47%. This suggests that "Churn" behavior in this dataset may be driven by factors not captured in the current features (e.g., customer service satisfaction scores or competitor pricing).
